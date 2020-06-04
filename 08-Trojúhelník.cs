@@ -17,6 +17,8 @@ namespace MaturitaFormalita
             Console.Write("Zadej stranu, ponožko: ");
             int c = int.Parse(Console.ReadLine());
 
+            // using the rule for making sure the triangle is possible to do
+            // two sides MUST be bigger than the third one
             if (a > b + c)
             {
                 Console.WriteLine("Toto není možné.");
@@ -31,6 +33,7 @@ namespace MaturitaFormalita
             }
             else
             {
+                // using Pythagoras rule to make sure the triangle is right
                 if (c * c == a * a + b * b)
                 {
                     Console.WriteLine("Trojúhelník je pravoúhlý.");

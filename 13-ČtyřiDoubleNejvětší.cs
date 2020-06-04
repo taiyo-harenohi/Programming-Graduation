@@ -8,6 +8,8 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // we have 4 double numbers and we have to choose the biggest one
+        // using formal and real parametres in method
         static void Main(string[] args)
         {
             double a = 214.254789;
@@ -18,8 +20,10 @@ namespace MaturitaFormalita
             Console.WriteLine("Největší ze zadaných čísel je: " + NejvětšíZNich(a, b, c, d));
         }
 
+        // the method is a return type; it returns the biggest of them
         public static double NejvětšíZNich(double a, double b, double c, double d)
         {
+            // getting the smallest possible number there is to compare it with our four doubles
             double největší = double.MinValue;
             if (a > největší)
             {

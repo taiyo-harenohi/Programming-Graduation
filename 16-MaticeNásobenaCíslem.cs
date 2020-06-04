@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // multiplying matrix by using a number
         static void Main(string[] args)
         {
             int[,] matrix = { { 4, 2 }, { 6, 2 }, { 7, 3 } };

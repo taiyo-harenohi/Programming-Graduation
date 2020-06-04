@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // showing off the wonders of the Class and OOP
         static void Main(string[] args)
         {
             PocitaniSVektory pv = new PocitaniSVektory(-1, 3, 2);

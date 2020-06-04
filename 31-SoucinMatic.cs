@@ -8,7 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
-        // random matice nefungují, ale vzhledem k tomu, že v zadání to není, tak yolo
+        // random matrixes work from time to time, but I dunno why, this is the correct answer :shrug:
         static void Main(string[] args)
         {
             int[,] a = Create();
@@ -31,8 +31,8 @@ namespace MaturitaFormalita
         public static int[,] Create()
         {
             Random rnd = new Random();
-            int m = rnd.Next(1, 6);
-            int n = rnd.Next(1, 6);
+            int m = rnd.Next(2, 6);
+            int n = rnd.Next(2, 6);
             int[,] a = new int[m,n];
 
             for (int i = 0; i < m; i++)
@@ -66,6 +66,8 @@ namespace MaturitaFormalita
                 {
                     for (int k = 0; k < a.GetLength(1); k++)
                     {
+                        // !!! IMPORTANT – we have to have to go through another cycle to get the new number
+                        // first has k, j / second i, k
                         both[i, j] += a[k, j] * b[i, k];
                     }
                 }

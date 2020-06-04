@@ -9,10 +9,12 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // a file full of r circles => printing it on Console
         static void Main(string[] args)
         {
             using (StreamReader sr = new StreamReader(@"C:\Users\Admin\Desktop\realnacisla.txt", Encoding.Default))
             {
+                // reading the file line by line
                 string line;
                 while((line = sr.ReadLine()) != null)
                 {

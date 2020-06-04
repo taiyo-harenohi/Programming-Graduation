@@ -8,15 +8,22 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // program showing classes, because this shit is kinda awesome
+        // !! need one more method for doing the magic stuff with 
         static void Main(string[] args)
         {
+            // declaring the first class, Okno
             Okno o = new Okno("Regex", 120, 200);
+            // using a method from this class
             o.Vypis();
+            // declaring the second class, Regex
             Regex r = new Regex();
+            // using a method from the class
             r.Napis();
         }
     }
 
+    // First class; Parent
     class Okno
     {
         public string typOkna { get; set; }
@@ -45,6 +52,7 @@ namespace MaturitaFormalita
         }
     }
 
+    // Second class; Child
     class Regex : Okno
     {
         public void Napis()

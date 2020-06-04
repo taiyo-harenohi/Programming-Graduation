@@ -8,12 +8,14 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // just easy matrix... or it was supposed to be easy, at least, lol
         static void Main(string[] args)
         {
             Console.Write("Zadej velikost m: ");
             int m = int.Parse(Console.ReadLine());
             Console.Write("Zadej velikost n: ");
             int n = int.Parse(Console.ReadLine());
+            // the declaration of matrix => int[,] nameOfMatrix = new int [m,n];
             int[,] array = new int[m,n];
 
             for (int i = 0; i < m; i++)
@@ -24,6 +26,7 @@ namespace MaturitaFormalita
                     array[i, j] = int.Parse(Console.ReadLine());
                 }
             }
+            // we MUST print it via foreach => I used a counter, that jumps whenever it reaches the end of the line
             int pocitadlo = 1;
             foreach(int item in array)
             {

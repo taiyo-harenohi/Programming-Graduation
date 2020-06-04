@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // some weird work done with List<>, lololol
         static void Main(string[] args)
         {
             List<int> seznam = new List<int>() { 1, 5, 3, 2, 45, 14};
@@ -18,6 +19,7 @@ namespace MaturitaFormalita
             Zmena(seznam);
         }
 
+        // the List at the start
         public static void TiskSeznamu(List<int> a) 
         {
             foreach (int number in a)
@@ -27,12 +29,14 @@ namespace MaturitaFormalita
             Console.WriteLine();
         }
 
+        // inserting a number on the start
         public static void NaZacatek(List<int> a)
         {
             a.Insert(0, 21);
             TiskSeznamu(a);
         }
 
+        // inserting number behind a chosen number
         public static void VlozZa(List<int> a)
         {
             Console.Write("Za který index chcete přidat číslo 0? ");
@@ -42,6 +46,7 @@ namespace MaturitaFormalita
             TiskSeznamu(a);
         }
 
+        // multiplying the List<> by two
         public static void Zmena(List<int> a)
         {
             for (int i = 0; i < a.Count; i++)

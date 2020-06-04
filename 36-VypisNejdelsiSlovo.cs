@@ -9,6 +9,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // it was here already, so fuck it; you just write the words yourself, lol
         static void Main(string[] args)
         {
             Console.Write("Kolik slov chcete zapsat? ");

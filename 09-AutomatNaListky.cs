@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // really easy thing; just bunch of if else statements
         static void Main(string[] args)
         {
             Console.Write("Zadej vzdálenost v km, ponožko: ");
@@ -31,7 +32,7 @@ namespace MaturitaFormalita
             }
             else
             {
-                Console.WriteLine("Co to děláš?! You cant cheat the system!");
+                Console.WriteLine("Co to děláš?! You can't cheat the system!");
             }
         }
     }

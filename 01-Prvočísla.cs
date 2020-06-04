@@ -16,7 +16,7 @@ namespace MaturitaFormalita
             int cislo = int.Parse(Console.ReadLine());
             bool jetoprvocislo = false;
 
-            // solving the problem by for cycle
+            // solving the problem by using for cycle
             for (int i = cislo - 1; i > 1; i--)
             {
                 if (cislo % i == 0) // if we can divide the cislo by any i, it is not a primary number
@@ -25,7 +25,7 @@ namespace MaturitaFormalita
                     break;
                 }
                 else
-                {a
+                {
                     jetoprvocislo = true;
                 }
             }
@@ -61,7 +61,11 @@ namespace MaturitaFormalita
                     }
                     if (jetoprvocislo || num == 2)
                     {
-                        Console.WriteLine("{0}", num);
+                        Console.WriteLine("{0} je prvočíslo.", num);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} není prvočíslo.", num);
                     }
                 }
             }

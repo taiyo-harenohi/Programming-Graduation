@@ -9,21 +9,22 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // reading txt. file – if greater than 0, multiply by 2 / if smaller than 0, put out the abs of the number
         static void Main(string[] args)
         {
+            // reading the file line by line
             using (StreamReader sr = new StreamReader(@"C:\Users\Admin\Desktop\dummieTexts\cislapro27.txt", Encoding.Default))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    int num = int.Parse(line);
-                    if (num >= 0)
+                    if (int.Parse(line) >= 0)
                     {
-                        Console.WriteLine(num * 2);
+                        Console.WriteLine(int.Parse(line) * 2);
                     }
                     else
                     {
-                        Console.WriteLine(Math.Abs(num));
+                        Console.WriteLine(Math.Abs(int.Parse(line)));
                     }
                 }
             }

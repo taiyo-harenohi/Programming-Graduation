@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // doing fun stuff with List<> :)
         static void Main(string[] args)
         {
             // creating List

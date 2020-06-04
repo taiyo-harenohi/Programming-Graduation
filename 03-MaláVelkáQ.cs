@@ -19,6 +19,7 @@ namespace MaturitaFormalita
                 if (písmeno.ToLower() == "q")
                 {
                     neníq = true;
+                    Console.WriteLine("Tohle je konec, ponožko.");
                     break;
                 }
                 Console.WriteLine(písmeno.ToLower());

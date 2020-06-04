@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace MaturitaFormalita
 {
     class Program
     {
         // I did it via List<>; it can also be done by using LSS, but...
         // why would you do that?
+        // but you should probably do this via the focking LSS, lol :)
         static void Main(string[] args)
         {
             Random rnd = new Random();

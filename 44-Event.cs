@@ -8,28 +8,31 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // another fuckery, lololol
+        // using events with delegate and I just dunno
+
         static void Main(string[] args)
         {
-            //instance vydavatele
+            // instance vydavatele
             Metronom m = new Metronom();
-            //instance odběratele
+            // instance odběratele
             Listener l = new Listener();
-            //přihlášení k odběru
+            // přihlášení k odběru
             l.Subscribe(m);
-            //metoda pro vyvolání události
+            // metoda pro vyvolání události
             m.Start();
         }
     }
     public class Metronom
     {
-        //deklarace delegáta
+        // deklarace delegáta
         public delegate void TickEventHandler(Metronom m, EventArgs e);
         public EventArgs e = null;
 
-        //deklarace události
+        // deklarace události
         public event TickEventHandler Tick;
 
-        //volající metoda
+        // volající metoda
         public void Start()
         {
             while (true)
@@ -45,12 +48,12 @@ namespace MaturitaFormalita
 
     public class Listener
     {
-        //metoda pro obsluhu události – eventhandler
+        // metoda pro obsluhu události – eventhandler
         private void HeardIt(Metronom m, EventArgs e)
         {
             Console.WriteLine("Slyšel jsem to!");
         }
-        //metoda pro přihlášení odběru
+        // metoda pro přihlášení odběru
         public void Subscribe(Metronom m)
         {
             m.Tick += new Metronom.TickEventHandler(HeardIt);

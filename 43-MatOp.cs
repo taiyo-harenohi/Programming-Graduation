@@ -8,6 +8,8 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // pretty much the last script with small changes :)
+
         public delegate int matop(int a, int b);
         static void Main(string[] args)
         {

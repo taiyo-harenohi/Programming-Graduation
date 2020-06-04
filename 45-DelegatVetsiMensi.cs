@@ -9,16 +9,21 @@ namespace MaturitaFormalita
     delegate void Cisla(int cislo);
     class Program
     {
+        // which number is greater? Cannot use the usual delegate, but a lil bit different one :) 
         static void Main(string[] args)
         {
             // nejde řešit klasickým delegátem, protože void nejde převést; sračka, no
             Random rnd = new Random();
             int num = rnd.Next(0, 99);
-            Cisla del; // deklarace delegátu
-            Program program = new Program(); // protože metody nejsou statické, tak musí být odkaz na třídu
-            // podmínka, u níž nemám sebemenší tušení, jak tvl funguje
+
+            // deklarace delegátu
+            Cisla del;
+            // protože metody nejsou statické, tak musí být odkaz na třídu
+            Program program = new Program(); 
+            // tenární operátor, jak je napsáno v zadání
             del = (num > 50) ? new Cisla(program.MalaCisla) : new Cisla(program.VelkaCisla);
-            del(num); // zavolání onoho delegátu, protože to jinak nic nedělá :)
+            // zavolání onoho delegátu, protože to jinak nic nedělá :)
+            del(num);
         }
         void VelkaCisla(int a)
         {

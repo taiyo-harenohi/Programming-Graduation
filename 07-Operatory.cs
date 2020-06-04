@@ -8,6 +8,8 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // probably the easiest shit here, I love this
+
         static void Main(string[] args)
         {
             int a = 2;

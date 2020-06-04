@@ -9,57 +9,48 @@ namespace MaturitaFormalita
     class Program
     {
         // using SelectSort; 
-        // I recommend using this one or BubbleSort, as they are the easiest
+        // I recommend using this one, InsertSort or BubbleSort, as they are the easiest
         static void Main(string[] args)
         {
-            int[] array = new int[] { 44, 55, 12, 42, 94, 18, 10, 6 };
-
-            Console.WriteLine("Původní – neseřazená posloupnost:");
-            Print(array);
-            Console.WriteLine();
-            SelectSort(array);
-
-            Console.WriteLine("\nPotom – seřazená posloupnost:");
-            Print(array);
-            Console.ReadLine();
+            // declaring array
+            int[] array = new int[] { 2, 4, 5, 6, 1, 3, 0, 8, -2 };
+            Print(Sorting(array));
         }
 
-        public static void Print(int[] pole)
+        // method for printing array
+        public static void Print(int[] ar)
         {
-            Console.WriteLine();
-            foreach(int num in pole)
+            foreach(int num in ar)
             {
-                Console.Write(num + " ");
+                Console.Write("{0}  ", num);
             }
         }
 
-        public static void SelectSort(int[] pole)
+        public static int[] Sorting(int[] ar)
         {
-            // credits to Jožek; my version wouldn't work no matter what :)
-            int index_min;
-            int min;
-            int s = 0;
-
-            while (true)
+            // we have to remember that the princip of SelectSort is finding the min in the array and swipe it with array[0]
+            // declaring min and an empty variable to change values later on
+            int min, pom = 0;
+            // going through the array
+            for (int i = 0; i < ar.Length - 1; i++)
             {
-                min = pole[s];
-                for (int i = s; i < pole.Length; i++)
+                // min is now the same number as i
+                min = i;
+                // going through the array to find the smallest number
+                for (int j = i; j < ar.Length; j++)
                 {
-                    if (pole[i] < min)
+                    // if number on ar[min] is greater than on ar[j], we change the min
+                    if (ar[j] < ar[min])
                     {
-                        min = pole[i];
+                        min = j;
                     }
                 }
-                index_min = Array.IndexOf(pole, min);
-                pole[index_min] = pole[s];
-                pole[s] = min;
-                Print(pole);
-                s++;
-                if (pole.Length == s)
-                {
-                    break;
-                }
+                // changing the values of three variables
+                pom = ar[i];
+                ar[i] = ar[min];
+                ar[min] = pom;
             }
+            return ar;
         }
     }
 }

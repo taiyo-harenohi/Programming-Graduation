@@ -11,7 +11,7 @@ namespace MaturitaFormalita
         // asi špatně? 
         static void Main(string[] args)
         {
-            Console.WriteLine(Bisekce(0, 1, 1e-10));
+            Bisekce(0, 1, 1e-10);
         }
 
         static double Bisekce(double a, double b, double eps)

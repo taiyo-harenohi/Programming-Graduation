@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // just showing off continue and break on the easy for cycle
         static void Main(string[] args)
         {
             for (int i = 1; i <= 10; i++)
