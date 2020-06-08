@@ -8,7 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
-        // asi špatně? 
+        // This is the moment when you ask yourself what the fuck is going on
         static void Main(string[] args)
         {
             RegulaFalsi(1.5, 2, 1e-8);
@@ -20,7 +20,7 @@ namespace MaturitaFormalita
             do
             {
                 xs = x;
-                x = a - (b - a) / ((Funkce(b) - Funkce(a)) * Funkce(a));
+                x = a - ((b - a) / (Funkce(b) - Funkce(a))) * Funkce(a);
                 if ((Funkce(a) * Funkce(x)) <= 0)
                 {
                     b = x;
@@ -31,7 +31,6 @@ namespace MaturitaFormalita
                 }
                 Console.WriteLine("{0:F10}      {1:F10}", x, Funkce(x));
             } while (Math.Abs(xs - x) > (2 * eps));
-            x = (a + b) / 2;
         }
 
         public static double Funkce(double x)

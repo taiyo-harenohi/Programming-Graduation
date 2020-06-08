@@ -8,18 +8,25 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // going through an array to find out if there is a certain number and how many times
         static void Main(string[] args)
         {
+            // declaring the array
             int[] array = new int[] { 3, 2, 4, 1, 0, 4, 4, 2, 8, 0, 0, 0, 2, 1, 4, 4, 4, };
 
             Console.Write("Zadej celé číslo: ");
             int cislo = int.Parse(Console.ReadLine());
 
+            // number of occurences
             int pocet = 0;
+
+            // using foreach to go through the whole array
             foreach (int num in array)
             {
+                // if the user's input is the same as the number in the array
                 if (num == cislo)
                 {
+                    // the number of occurences goes up
                     pocet++;
                 }
             }

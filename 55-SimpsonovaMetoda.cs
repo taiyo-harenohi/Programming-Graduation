@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // using Simpson's method
         static void Main(string[] args)
         {
             Console.Write("Počet n: ");

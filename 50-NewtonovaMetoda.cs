@@ -8,7 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
-        // asi špatně? 
+        // Newton: everything is greater than something else in the if-statements
         static void Main(string[] args)
         {
             Newton(0, 1, 1e-10);

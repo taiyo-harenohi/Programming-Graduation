@@ -8,6 +8,7 @@ namespace MaturitaFormalita
 {
     class Program
     {
+        // Integrals go brrr; trapezoid go brrr
         static void Main(string[] args)
         {
             Console.Write("Počet n: ");

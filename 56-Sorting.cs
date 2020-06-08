@@ -29,6 +29,7 @@ namespace MaturitaFormalita
         public static int[] Sorting(int[] ar)
         {
             // we have to remember that the princip of SelectSort is finding the min in the array and swipe it with array[0]
+            
             // declaring min and an empty variable to change values later on
             int min, pom = 0;
             // going through the array

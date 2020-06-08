@@ -10,7 +10,8 @@ namespace MaturitaFormalita
     {
         // Found on the internet, since my work didn't work
         // credits to geeksforgeeks.org, mits
-        // using recursive method
+        // using recursive method; can be done without it, of course
+        // I actually have no idea what is going on, lolol
 
         static double p = 1;
         static double f = 1;
@@ -21,6 +22,7 @@ namespace MaturitaFormalita
             Console.WriteLine(Math.Round(Ex(x, n), 6));
         }
 
+        // declaring the recursive method
         static double Ex(int x, int n)
         {
             double r;
@@ -30,6 +32,7 @@ namespace MaturitaFormalita
                 return 1;
             }
 
+            // calling the method
             r = Ex(x, n - 1);
             p *= x;
             f *= n;
